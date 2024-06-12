@@ -35,12 +35,17 @@
 * Flask
 * marshmallow-sqlalchemy
 * SQLAlchemy
+* psycopg2
 
 ### Functions/API Manual Page
 
 ## Additional Information
 
-### Why did we use an ORM for this project?
+### Why did I use an ORM for this project?
+
+SQLAlchemy interacts with the database model using Python instead of raw SQL. I find that this reduces the amount of boilerplate code I need to write and makes it faster to iterate over in terms of testing and development.
+
+SQLAlchemy and Flask require both little overhead for developers to run, whereas setting up a project without these libraries handling HTTP requests, routing, url handling, networking, database integration and database queries require a more in-depth understanding of web development, networking and databases.. It's a lot of unnecessary work for setting up an API webserver.
 
 ### How did Database Normalization affect the project Database Model?
 
