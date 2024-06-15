@@ -32,10 +32,10 @@
 
 ### Imported Packages/Modules
 
-* Flask
+* flask
 * marshmallow-sqlalchemy
-* SQLAlchemy
-* psycopg2
+* flask-sqlalchemy
+* psycopg2-binary
 
 ### Functions/API Manual Page
 
