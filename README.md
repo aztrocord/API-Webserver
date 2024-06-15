@@ -1,8 +1,8 @@
-# API Webserver: Grad School Admission Data
+# Grad School Admissions Data API
 
 ## Github Repo
 
-[Github Project Link](https://github.com/duskpeyl/API-Webserver)
+[Github Project Link](https://github.com/duskpeyl/Graduate-School-Admissions-API)
 
 ## Description
 
@@ -32,7 +32,7 @@
 
 ### Imported Packages/Modules
 
-* flask
+* Flask
 * marshmallow-sqlalchemy
 * flask-sqlalchemy
 * psycopg2-binary
