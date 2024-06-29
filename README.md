@@ -10,7 +10,7 @@
 
 ## Implementation Plan
 
-## Entity Relationship Diagram for Database (ERD)
+### Entity Relationship Diagram for Database (ERD)
 
 ### Overall Plan
 
@@ -41,7 +41,7 @@
 
 ## Additional Information
 
-## How Were the Imported Packages and Dependencies Used in This App?
+### How Were the Imported Packages and Dependencies Used in This App?
 
 ### Why Did I Use an ORM for This Project?
 
