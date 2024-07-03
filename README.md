@@ -32,10 +32,15 @@
 
 ### Imported Packages/Modules
 
-* Flask
+* flask
 * marshmallow-sqlalchemy
+* flask-jwt
+* flask-marshmallow
 * flask-sqlalchemy
 * psycopg2-binary
+* bcrypt
+* python-dotenv
+* datetime
 
 ### Functions/API Manual Page
 
