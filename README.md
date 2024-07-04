@@ -2,7 +2,7 @@
 
 ## Github Repo
 
-[Github Project Link](https://github.com/duskpeyl/Graduate-School-Admissions-API)
+[Github Project Link](https://github.com/duskpeyl/GradX-Graduate-School-Admissions-API)
 
 ## Description
 
