@@ -20,6 +20,6 @@ class Application(db.Model):
 class ApplicationSchema(ma.Schema):
     school = fields.Nested('SchoolSchema')
     major = fields.Nested('MajorSchema')
-    user = fields.Nested('UserSchema')
+    user = fields.Nested('UserSchema', exclude=['password'])
     class Meta:
         fields = ('status', 'school', 'major', 'user')
