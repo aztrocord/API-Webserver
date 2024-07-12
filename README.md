@@ -8,6 +8,19 @@
 
 ### Features
 
+- **User Registration and Authentication**:
+  - **Sign Up**: Users can create an account by providing an email and password.
+  - **Login**: Registered users can log in using their credentials.
+
+- **Profile Management**:
+  - **View Profile**: Users can view their profile information including submitted applications.
+  - **Edit Profile**: Users can update their personal information and application details.
+
+- **Application Submission**:
+  - **Add Application**: Users can add new application records, including details such as GPA, GRE scores, and application status.
+  - **Update Application**: Users can edit their existing application details.
+  - **Delete Application**: Users can remove an application if needed.
+  
 ## Implementation Plan
 
 ### Entity Relationship Diagram for Database (ERD)
@@ -46,16 +59,16 @@
 
 ## Additional Information
 
-### How Were the Imported Packages and Dependencies Used in This App?
+### How were the imported packages and dependencies used in this app?
 
-### Why Did I Use an ORM for This Project?
+### Why did I use an ORM for this project?
 
 SQLAlchemy interacts with the database model using Python instead of raw SQL. I find that this reduces the amount of boilerplate code I need to write and makes it faster to iterate over in terms of testing and development.
 
 SQLAlchemy and Flask require both little overhead for developers to run, whereas setting up a project without these libraries handling HTTP requests, routing, url handling, networking, database integration and database queries require a more in-depth understanding of web development, networking and databases.. It's a lot of unnecessary work for setting up an API webserver.
 
-### How Did Database Normalization Affect the Project Database Model?
+### How did database normalization affect the project database model?
 
-### Benefits and Drawbacks of using PostgreSQL
+### Benefits and drawbacks of using PostgreSQL
 
-### References
+## References
