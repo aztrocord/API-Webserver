@@ -25,7 +25,11 @@
 
 ### Entity Relationship Diagram for Database (ERD)
 
+![ERD Diagram](docs/grad-api-erd.png)
+
 ### Overall Plan
+
+![Overall Plan](docs/day_1.PNG)
 
 ### Dependencies  
 
