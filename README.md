@@ -6,6 +6,14 @@
 
 ## Description
 
+College admissions is a difficult process.
+
+Especially so for the 1.1 million members of the community [r/ApplyingToCollege](https://www.reddit.com/r/ApplyingToCollege/), many of which are obsessed with so-called "t20 colleges". A term referring to colleges ranked amongst top 20 national universities in the United States, typically ranked by publications such as U.S. News & World Report.
+
+Selective colleges within the t20 receive an upwards of [60,000 applications](https://www.forbes.com/sites/christopherrim/2024/03/29/this-year-was-a-historic-ivy-league-application-season-heres-what-you-need-to-know/) in a given year, making it truly difficult for students have a clearer understanding and grasp of their standing amongst other applicants. For those slightly older, many of these universities are also popular destinations for sudents aiming for postgraduate programs.
+
+GradX is a REST API that aggregates self-reported postgraduate admissions data from top university programs and seeks to resolve that problem for aspiring postgraduate students, by allowing users to compare their applications to other candidates based on their extracurriculars, standardized testing scores and grades.
+
 ### Features
 
 - **User Registration and Authentication**:
@@ -13,11 +21,13 @@
   - **Login**: Registered users can log in using their credentials.
 
 - **Profile Management**:
-  - **View Profile**: Users can view their profile information including submitted applications.
-  - **Edit Profile**: Users can update their personal information and application details.
+  - **View Profile**: Users can view their profile information on their account.
+  - **Edit Profile**: Users can update their personal information on their account.
+  - **Delete Profile**: Users can delete their profile.
 
 - **Application Submission**:
   - **Add Application**: Users can add new application records, including details such as GPA, GRE scores, and application status.
+  - **View Applications**: Users can view other people's applications and compare their stats.
   - **Update Application**: Users can edit their existing application details.
   - **Delete Application**: Users can remove an application if needed.
   
@@ -29,7 +39,8 @@
 
 ### Overall Plan
 
-![Overall Plan](docs/day_1.PNG)
+![Day-to-Day-1](docs/day_1.PNG)
+![Day-to-Day-2](docs/day_2.PNG)
 
 ### Dependencies  
 

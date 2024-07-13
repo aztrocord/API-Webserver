@@ -106,4 +106,4 @@ def delete_application(id):
     db.session.delete(application)
     db.session.commit()
     
-    return jsonify({"message": "Application deleted successfully"})
+    return {"message": "Application deleted successfully"}
