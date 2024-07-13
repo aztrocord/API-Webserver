@@ -5,11 +5,6 @@ from models.user import UserSchema, User, UpdateUserSchema
 from auth import authorize_owner, admin_only
 from init import db, bcrypt
 
-#Create user
-#Read user data
-#Update (your own) user
-#Delete user data
-
 users_bp = Blueprint('users', __name__, url_prefix='/users')
 
 #Log into an account

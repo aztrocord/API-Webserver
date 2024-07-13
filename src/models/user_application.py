@@ -22,6 +22,7 @@ class Application(db.Model):
 class ApplicationSchema(ma.Schema):
     school = fields.Nested('SchoolSchema')
     major = fields.Nested('MajorSchema')
+    degree_type = fields.Nested('DegreeTypeSchema')
     user = fields.Nested('UserSchema', exclude=['password'])
     class Meta:
-        fields = ('id', 'status', 'school', 'major', 'user')
+        fields = ('id', 'status', 'school', 'major', 'user', 'degree_type')

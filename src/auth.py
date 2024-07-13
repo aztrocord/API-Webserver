@@ -20,3 +20,8 @@ def authorize_owner(account):
     user_id = get_jwt_identity()
     if user_id != account.id:
         abort(make_response(jsonify(error="You must be the account owner to access this resource"), 403))
+
+def authorize_application_owner(application):
+    user_id = get_jwt_identity()
+    if user_id != application.user_id:
+        abort(make_response(jsonify(error="You must be the application owner to access this resource"), 403))
