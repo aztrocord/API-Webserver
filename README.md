@@ -8,7 +8,7 @@
 
 College admissions is a difficult process.
 
-Especially so for the 1.1 million members of the community [r/ApplyingToCollege](https://www.reddit.com/r/ApplyingToCollege/), many of which are obsessed with so-called "t20 colleges". A term referring to colleges ranked amongst top 20 national universities in the United States, typically ranked by publications such as U.S. News & World Report.
+Especially so for the 1.1 million members of the community [r/ApplyingToCollege](https://www.reddit.com/r/ApplyingToCollege/), many of which are obsessed with so-called "[t20 colleges](https://www.usnews.com/best-colleges/rankings/national-universities)". A term referring to colleges ranked amongst top 20 national universities in the United States, typically ranked by publications such as U.S. News & World Report.
 
 Selective colleges within the t20 receive an upwards of [60,000 applications](https://www.forbes.com/sites/christopherrim/2024/03/29/this-year-was-a-historic-ivy-league-application-season-heres-what-you-need-to-know/) in a given year, making it truly difficult for students have a clearer understanding and grasp of their standing amongst other applicants. For those slightly older, many of these universities are also popular destinations for sudents aiming for postgraduate programs.
 
