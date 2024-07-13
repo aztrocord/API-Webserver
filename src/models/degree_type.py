@@ -11,4 +11,4 @@ class Degree_Type(db.Model):
     
 class DegreeTypeSchema(ma.Schema):
     class Meta:
-        fields = ('major_name')
+        fields = ('id', 'major_name')

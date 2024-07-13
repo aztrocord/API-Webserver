@@ -12,14 +12,16 @@ class Application(db.Model):
     school_id: Mapped[int] = mapped_column(ForeignKey('schools.id'))
     major_id: Mapped[int] = mapped_column(ForeignKey('majors.id'))
     user_id: Mapped[int] = mapped_column(ForeignKey('users.id'))
+    degree_id: Mapped[int] = mapped_column(ForeignKey('degree_types.id'))
 
-    school: Mapped['School'] = relationship('School')
-    major: Mapped['Major'] = relationship('Major')
-    user: Mapped['User'] = relationship('User')
+    school: Mapped['School'] = relationship()
+    major: Mapped['Major'] = relationship()
+    user: Mapped['User'] = relationship()
+    degree_type: Mapped['Degree_Type'] = relationship()
 
 class ApplicationSchema(ma.Schema):
     school = fields.Nested('SchoolSchema')
     major = fields.Nested('MajorSchema')
     user = fields.Nested('UserSchema', exclude=['password'])
     class Meta:
-        fields = ('status', 'school', 'major', 'user')
+        fields = ('id', 'status', 'school', 'major', 'user')

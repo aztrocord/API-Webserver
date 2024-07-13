@@ -47,7 +47,7 @@
 * typing_extensions==4.12.2
 * Werkzeug==3.0.3
 
-### Imported Packages/Modules
+### Imported Packages
 
 * flask
 * marshmallow-sqlalchemy
@@ -57,7 +57,6 @@
 * psycopg2-binary
 * bcrypt
 * python-dotenv
-* datetime
 
 ### Functions/API Manual Page
 

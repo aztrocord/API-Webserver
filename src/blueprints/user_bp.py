@@ -88,7 +88,7 @@ def read_user_details(id):
     else:
         return {"Error": "Account not found"}
     
-# Update your account details (R)
+# Update your account details (U)
 @jwt_required()
 @users_bp.route('/<int:id>', methods=['PUT', 'PATCH'])
 def update_user_details(id):
@@ -104,7 +104,7 @@ def update_user_details(id):
     account_info = UserSchema(unknown="exclude").load(
         request.json
     )
-    # Update the user account details
+    # Update the user account details fro
     user_account.first_name = account_info.get('first_name', user_account.first_name)
     user_account.last_name = account_info.get('last_name', user_account.last_name)
     user_account.email = account_info.get('email', user_account.email)
@@ -117,3 +117,12 @@ def update_user_details(id):
     # Add the updated  to the database
     db.session.commit()
     return UserSchema.dump(account_info)
+
+# Delete your user profile (D)
+@jwt_required
+@users_bp.route('/<int:id>', methods=['DELETE'])
+def delete_user(id):
+    user_account = db.get_or_404(User, id)
+    authorize_owner(user_account)
+    db.session.delete(user_account)
+    db.session.commit()

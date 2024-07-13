@@ -11,4 +11,4 @@ class Major(db.Model):
     
 class MajorSchema(ma.Schema):
     class Meta:
-        fields = ('major_name')
+        fields = ('id', 'major_name')
