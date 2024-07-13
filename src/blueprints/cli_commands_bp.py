@@ -2,7 +2,7 @@ from flask import Blueprint
 from models.user import User
 from models.user_application import Application
 from models.major import Major
-from models.degree_type import Degree_Type
+from models.degree_type import DegreeType
 from models.school import School
 from init import db, bcrypt
 
@@ -38,10 +38,10 @@ def seed_db():
     db.session.commit()
 
     university_program_type = [
-        Degree_Type(degree_type_name='MS/MSc'),
-        Degree_Type(degree_type_name='MLA'),
-        Degree_Type(degree_type_name='MFA'),
-        Degree_Type(degree_type_name='PhD'),
+        DegreeType(degree_type_name='MS/MSc'),
+        DegreeType(degree_type_name='MLA'),
+        DegreeType(degree_type_name='MFA'),
+        DegreeType(degree_type_name='PhD'),
     ]
 
     db.session.add_all(university_program_type)

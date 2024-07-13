@@ -16,7 +16,7 @@ def admin_only(fn):
     
     return inner
 
-def authorize_owner(card):
+def authorize_owner(account):
     user_id = get_jwt_identity()
-    if user_id != card.user_id:
-        abort(make_response(jsonify(error="You must be the card owner to access this resource"), 403))
+    if user_id != account.id:
+        abort(make_response(jsonify(error="You must be the account owner to access this resource"), 403))

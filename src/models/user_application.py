@@ -17,7 +17,7 @@ class Application(db.Model):
     school: Mapped['School'] = relationship()
     major: Mapped['Major'] = relationship()
     user: Mapped['User'] = relationship()
-    degree_type: Mapped['Degree_Type'] = relationship()
+    degree_type: Mapped['DegreeType'] = relationship()
 
 class ApplicationSchema(ma.Schema):
     school = fields.Nested('SchoolSchema')

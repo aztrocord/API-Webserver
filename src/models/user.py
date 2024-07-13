@@ -25,14 +25,22 @@ class User(db.Model):
     undergrad_major_id: Mapped[Optional[int]] = mapped_column(ForeignKey('majors.id'))
     undergrad_major: Mapped['Major'] = relationship()
 
-    user_applications: Mapped[List['Application']] = relationship(back_populates='user')
-
 class UserSchema(ma.Schema):
     undergrad_school = fields.Nested('SchoolSchema')
     undergrad_major = fields.Nested('MajorSchema')
+    user_applications = fields.Nested('ApplicationSchema')
     email = fields.Email(required=True)
     password = fields.String(min=8, required=True)
 
     class Meta:
-        fields = ('id', 'first_name', 'last_name', 'email', 'is_admin', 'undergrad_school', 'undergrad_major', 'undergrad_GPA', 'top_extracurriculars', 'gre_scores')
+        fields = ('id', 'first_name', 'last_name', 'email', 'password', 'is_admin', 'undergrad_school', 'undergrad_major', 'undergrad_GPA', 'top_extracurriculars', 'gre_scores')
+        include_relationships = True
+
+class UpdateUserSchema(ma.Schema):
+    undergrad_school = fields.Nested('SchoolSchema')
+    undergrad_major = fields.Nested('MajorSchema')
+    user_applications = fields.Nested('ApplicationSchema')
+
+    class Meta:
+        fields = ('id', 'first_name', 'last_name', 'is_admin', 'undergrad_school', 'undergrad_major', 'undergrad_GPA', 'top_extracurriculars', 'gre_scores')
         include_relationships = True

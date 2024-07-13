@@ -3,7 +3,7 @@ from sqlalchemy import String
 from init import ma, db
 
 
-class Degree_Type(db.Model):
+class DegreeType(db.Model):
     __tablename__ = "degree_types"
 
     id: Mapped[int] = mapped_column(primary_key=True)
