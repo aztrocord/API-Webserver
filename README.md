@@ -41,14 +41,19 @@ The code for this project was styled according to [the PEP 8 Style Guide by Guid
 
 ![ERD Diagram](docs/grad-api-erd.png)
 **One-to-Many Relationships:**
-Users to Applications: Each user can submit multiple applications.
 
-**Many-to-One Relationships:**
-Applications to Schools: Many applications can be made to one school.
-Applications to Majors: Many applications can target one major.
-Applications to Degree Types: Many applications can be for one degree type.
-Users to Undergraduate School: Each user attends one undergraduate school.
-Users to Undergraduate Major: Each user has one undergraduate major.
+> Users to Applications: Each user can submit multiple applications.
+
+**Many-to-One Relationships
+> Applications to Schools: Many applications can be made to one school.
+
+> Applications to Majors: Many applications can target one major.
+
+> Applications to Degree Types: Many applications can be for one degree type.
+
+> Users to Undergraduate School: Each user attends one undergraduate school.
+
+> Users to Undergraduate Major: Each user has one undergraduate major.
 
 ### Overall Plan
 
@@ -464,7 +469,7 @@ Afterwards, create a user and db, and add a DB_URI (database connection string) 
 
 ### Step 4: Run the Program
 
-Once you have changed the permissions of the bash script within the root directory of the unzipped project and configure .env, run the following command:
+Once you have changed the permissions of the bash script within the root directory of the unzipped project and configured .env, run the following command:
 
 > bash Run_GradX_Flask_API.sh
 
