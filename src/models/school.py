@@ -11,6 +11,7 @@ class School(db.Model):
     county: Mapped[str] = mapped_column(String(200))
     state: Mapped[str] = mapped_column(String(200))
     country: Mapped[str] = mapped_column(String(200))
+    
 class SchoolSchema(ma.Schema):
     class Meta:
         fields = ('id', 'school_name', 'county', 'state', 'country')

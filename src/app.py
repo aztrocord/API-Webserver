@@ -1,10 +1,12 @@
 from marshmallow.exceptions import ValidationError
 from blueprints.user_bp import users_bp
 from blueprints.cli_commands_bp import db_commands
+from blueprints.user_application_bp import application_bp
 from init import app
 
 app.register_blueprint(users_bp)
 app.register_blueprint(db_commands)
+app.register_blueprint(application_bp)
 
 @app.route('/')
 def index():
