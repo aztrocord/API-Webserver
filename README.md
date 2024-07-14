@@ -31,6 +31,10 @@ For those who are slightly older and have already graduated from university, man
   - **Update Application**: Users can edit their existing application details.
   - **Delete Application**: Users can remove an application if needed.
   
+## Code Style 
+
+The code for this project was styled according to [the PEP 8 Style Guide by Guido van Rossum, Barry Warsaw, and Alyssa Coghlan.](https://peps.python.org/pep-0008/)
+  
 ## Implementation Plan
 
 ### Entity Relationship Diagram for Database (ERD)
@@ -50,6 +54,11 @@ Users to Undergraduate Major: Each user has one undergraduate major.
 
 ![Day-to-Day-1](docs/day_1.PNG)
 ![Day-to-Day-2](docs/day_2.PNG)
+![Day-to-Day-3](docs/day_2.PNG)
+![Checklist](docs/user_checklist.PNG)
+![Checklist](docs/application_checklist1.PNG)
+![Checklist](docs/application_checklist2.PNG)
+
 
 ### Dependencies  
 
@@ -467,13 +476,15 @@ This will automatically download all of the dependencies needed for the program 
 
 * Flask and Flask Extensions: Facilitate web server functionality and HTTP request handling.
 
-* SQLAlchemy: Enables ORM-based database interactions, simplifying database operations.
+* SQLAlchemy: Enables ORM-based database interactions for Flask, simplifying database operations.
 
 * marshmallow: Used for data serialization and validation.
 
 * bcrypt: Provides secure password hashing for user authentication.
 
-* psycopg2-binary: PostgreSQL adapter for Python, enabling database connectivity.
+* psycopg2-binary: PostgreSQL adapter for Python for database connectivity to Flask.
+
+* python-dotenv: Loads environment variables from a .env file into the application for configuration.
 
 ### Why did I use an ORM for this project?
 
@@ -486,3 +497,10 @@ SQLAlchemy and Flask require both little overhead for developers to run, whereas
 ### Benefits and drawbacks of using PostgreSQL
 
 ## References
+
+* Python Software Foundation (2024). Datetime — Basic Date and Time Types — Python 3.12.3 Documentation. [online] Python.org. Available at: [Link to datetime library](https://docs.python.org/3/library/datetime.html).
+* GNU (2022). Bash Reference Manual. [online] Available at: [Link to Bash Manual](https://www.gnu.org/software/bash/manual/bash.html).
+* Van Rossum, G., Warsaw, B. and Coghlan, N. (2023). PEP 8 – Style Guide for Python Code | peps.python.org. [online] peps.python.org. Available at: [Link to PEP Guide](https://peps.python.org/pep-0008/).
+* Flask (2024). Flask documentation. [online] Available at: [Link to Flask Documentation](https://flask.palletsprojects.com/en/3.0.x/).
+* Marshmallow (2024). Marshmallow Documentation. [online] marshmallow.readthedocs.io. Available at: [Link to Marshmallow library](https://marshmallow.readthedocs.io/en/stable/).
+* SQLAlchemy (2024). SQLAlchemy Documentation. [online] docs.sqlalchemy.org. Available at: [Link to SQLAlchemy library](https://docs.sqlalchemy.org/en/20/).
