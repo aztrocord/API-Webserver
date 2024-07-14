@@ -44,7 +44,8 @@ The code for this project was styled according to [the PEP 8 Style Guide by Guid
 
 > Users to Applications: Each user can submit multiple applications.
 
-**Many-to-One Relationships
+**Many-to-One Relationships:**
+
 > Applications to Schools: Many applications can be made to one school.
 
 > Applications to Majors: Many applications can target one major.
@@ -92,9 +93,9 @@ The code for this project was styled according to [the PEP 8 Style Guide by Guid
 * bcrypt
 * python-dotenv
 
-### Functions/API Manual Page
+## Functions/API Manual Page
 
-# User Management API Documentation
+### User Management API Documentation
 
 ### `POST /users/login`
 
