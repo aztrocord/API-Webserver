@@ -12,7 +12,9 @@ Especially so for the 1.1 million members of the community [r/ApplyingToCollege]
 
 Selective universities within the T20 receive an upwards of [60,000 applications](https://www.forbes.com/sites/christopherrim/2024/03/29/this-year-was-a-historic-ivy-league-application-season-heres-what-you-need-to-know/) in a given year, making it truly difficult for students have a clearer understanding and grasp of their standing amongst other applicants.
 
-For those who are slightly older and have already graduated from university, many of these universities are also popular destinations for students aiming for postgraduate programs. [GradX](https://github.com/duskpeyl/GradX-Graduate-School-Admissions-API) is merely a REST API that aggregates self-reported postgraduate admissions data from top university programs and seeks to resolve that problem for aspiring postgraduate students, by allowing users to compare their applications to other candidates based on their extracurriculars, standardized testing scores and grades.
+For those who are slightly older and have already graduated from university, many of these universities are also popular destinations for students aiming for postgraduate programs.
+
+[GradX](https://github.com/duskpeyl/GradX-Graduate-School-Admissions-API) is merely a REST API that aggregates self-reported postgraduate admissions data from top university programs and seeks to resolve that problem for aspiring postgraduate students, by allowing users to compare their applications to other candidates based on their extracurriculars, standardized testing scores and grades.
 
 ### Features
 
@@ -31,7 +33,7 @@ For those who are slightly older and have already graduated from university, man
   - **Update Application**: Users can edit their existing application details.
   - **Delete Application**: Users can remove an application if needed.
   
-## Code Style 
+## Code Style
 
 The code for this project was styled according to [the PEP 8 Style Guide by Guido van Rossum, Barry Warsaw, and Alyssa Coghlan.](https://peps.python.org/pep-0008/)
   
@@ -64,7 +66,6 @@ The code for this project was styled according to [the PEP 8 Style Guide by Guid
 ![Checklist](docs/user_checklist.PNG)
 ![Checklist](docs/application_checklist1.PNG)
 ![Checklist](docs/application_checklist2.PNG)
-
 
 ### Dependencies  
 
@@ -355,7 +356,7 @@ Authorization: Bearer <JWT_token>
 
 `401 Unauthorized` if the token is missing or invalid.
 
-### `GET /applications/{id}
+### `GET /applications/{id}`
 
 **Description:**
 Retrieves details of a specific application by its ID.
@@ -501,6 +502,11 @@ SQLAlchemy and Flask require both little overhead for developers to run, whereas
 ### How did database normalization affect the project database model?
 
 ### Benefits and drawbacks of using PostgreSQL
+
+**Benefits:**
+
+* Open source and can run on most major operating systems (Linux, Microsoft, OS X, and Unix).
+* Follows SQL-standard, making it easier for those who know SQL to pick it up
 
 ## References
 
