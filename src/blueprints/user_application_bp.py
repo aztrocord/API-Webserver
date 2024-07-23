@@ -77,7 +77,7 @@ def update_application(id):
     authorize_application_owner(application)
 
     # Load and validate the incoming data
-    application_info = ApplicationSchema(only=['']).load(
+    application_info = ApplicationSchema().load(
         request.json
     )
     # Update the application details

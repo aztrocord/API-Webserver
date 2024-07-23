@@ -24,5 +24,11 @@ class ApplicationSchema(ma.Schema):
     major = fields.Nested('MajorSchema')
     degree_type = fields.Nested('DegreeTypeSchema')
     user = fields.Nested('UserSchema', exclude=['password'])
+    id = fields.Integer(dump_only=True)
+    status = fields.String(required=True)
+    school_id = fields.Integer(required=True)
+    major_id = fields.Integer(required=True)
+    user_id = fields.Integer(required=True)
+    degree_id = fields.Integer(required=True)
     class Meta:
-        fields = ('id', 'status', 'school', 'major', 'user', 'degree_type')
+        fields = ('id', 'status', 'school_id', 'major_id', 'user_id', 'degree_id', 'school', 'major', 'degree_type', 'user')

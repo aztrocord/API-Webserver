@@ -62,7 +62,7 @@ The code for this project was styled according to [the PEP 8 Style Guide by Guid
 
 ![Day-to-Day-1](docs/day_1.PNG)
 ![Day-to-Day-2](docs/day_2.PNG)
-![Day-to-Day-3](docs/day_2.PNG)
+![Day-to-Day-3](docs/day_3.PNG)
 ![Checklist](docs/user_checklist.PNG)
 ![Checklist](docs/application_checklist1.PNG)
 ![Checklist](docs/application_checklist2.PNG)
@@ -447,7 +447,7 @@ Authorization: Bearer <JWT_token>
 
 `404 Not Found` if the application with the specified ID does not exist.
 
-## Installation Guide 
+## Installation Guide
 
 ### Step 1: Download the Project from Github
 
@@ -467,15 +467,38 @@ This will give permissions for your computer to execute the file.
 
 > remove ".sample" from .env
 
-Afterwards, create a user and db, and add a DB_URI (database connection string) and any secret key for JWT tokens to .env.
+Afterwards, create a user and db in postgres, and add the DB_URI (database connection string) to .env.
+
+> CREATE DATABASE GradX_db;
+
+> CREATE USER gradx_dev IDENTIFIED BY newpassword;
+
+> \c GradX_db;
+
+> GRANT ALL PRIVILEGES ON DATABASE GradX_db TO gradx_dev;
+
+> GRANT ALL ON SCHEMA public TO gradx_dev;
+> 
+Update the DB_URI environment variable in your application with the connection string:
+
+DB_URI="postgresql+psycopg2://gradx_dev:newpassword@localhost:5432/GradX_db"
+JWT_KEY="this can be changed to anything you want"
+
+Note: the JWT_KEY and db user details can be customized to your liking. 
 
 ### Step 4: Run the Program
 
-Once you have changed the permissions of the bash script within the root directory of the unzipped project and configured .env, run the following command:
+Once you have changed the permissions of the bash script within the root directory of the unzipped project and configured .env, run the following commands:
+
+> flask db create_sample_data
 
 > bash Run_GradX_Flask_API.sh
 
-This will automatically download all of the dependencies needed for the program to run, then start flask itself.
+The first command will create sample data for the flask application and the second command will automatically download all of the dependencies needed for the program to run, then start flask itself.
+
+If the shell script does not work, you can run it yourself using the following command:
+
+> flask run
 
 ## Additional Information
 

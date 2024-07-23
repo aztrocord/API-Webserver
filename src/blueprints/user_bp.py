@@ -1,6 +1,7 @@
 from datetime import timedelta
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import create_access_token, jwt_required
+from sqlalchemy.orm import defer
 from models.user import UserSchema, User, UpdateUserSchema
 from auth import authorize_owner, admin_only
 from init import db, bcrypt
@@ -70,7 +71,7 @@ def read_users_details():
     """
     account_queries = db.select(User)
     accounts = db.session.scalars(account_queries).all()
-    return UserSchema(many=True).dump(accounts)
+    return UserSchema(many=True, exclude=['password']).dump(accounts)
 
 # Read your account details (R)
 @users_bp.route('/<int:id>', methods=['GET'])
@@ -84,10 +85,9 @@ def read_user_details(id):
     account = db.session.scalar(stmt)
     authorize_owner(account)
     if account:
-        return UserSchema().dump(account)
+        return UserSchema(exclude=['password']).dump(account)
     else:
         return {"Error": "Account not found"}, 404
-    
 # Update your account details (U)
 @users_bp.route('/<int:id>', methods=['PUT', 'PATCH'])
 @jwt_required()
@@ -117,7 +117,7 @@ def update_user_details(id):
     
     # Add the updated  to the database
     db.session.commit()
-    return UserSchema().dump(user_account)
+    return UserSchema(exclude=['password']).dump(user_account)
 
 # Delete your user profile (D)
 @users_bp.route('/<int:id>', methods=['DELETE'])
