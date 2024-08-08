@@ -484,7 +484,7 @@ Update the DB_URI environment variable in your application with the connection s
 DB_URI="postgresql+psycopg2://gradx_dev:newpassword@localhost:5432/GradX_db"
 JWT_KEY="this can be changed to anything you want"
 
-Note: the JWT_KEY and db user details can be customized to your liking. 
+Note: the JWT_KEY and db user details can be customized to your liking. The commands detailed in this step are merely examples.
 
 ### Step 4: Run the Program
 
