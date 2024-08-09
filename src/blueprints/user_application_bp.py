@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required
-from models.user_application import ApplicationSchema, Application
+from models.user_application import ApplicationSchema, Application, School, SchoolSchema
 from auth import  authorize_application_owner
 from init import db, bcrypt
 
@@ -36,19 +36,36 @@ def create_application():
     return ApplicationSchema(new_application), 201
 
 # Read all applications in the database (R)
-@application_bp.route('/', methods=['GET'])
+@application_bp.route('/<str:school_name>/<str:application_status>', methods=['GET'])
 @jwt_required()
-def read_all_applications():
+def read_all_applications(school_name, application_status):
     """
     Retrieves the details of all applications in the database.
     Requires a valid JWT token for authentication.
     """
-    # Create a query to select all applications in the database and execute it.
-    application_queries = db.select(Application)
-    applications = db.session.scalars(application_queries).all()
+    if not application_status or not school_name:
+        # Create a query to select all applications in the database and execute it.
+        application_queries = db.select(Application)
+        applications = db.session.scalars(application_queries).all()
 
-    # Return all applications in the database to the client in JSON.
-    return ApplicationSchema(many=True).dump(applications)
+        # Return all applications in the database to the client in JSON.
+        return ApplicationSchema(many=True).dump(applications)
+    
+    elif school_name and application_status == "accepted":
+        # Create a query to select all applications with an accepted status for a particular school
+        school_query = db.select(School).where(School.name == school_name)
+        school_obj = db.session_scalar(school_query)
+
+        if school_obj:
+            # Find applications accepted into the chosen school in the URL
+            application_queries = db.select(Application).where(Application.school_id == school_obj.id)
+            applications = db.session.scalars(application_queries).all()
+
+
+            # Return all curated applications in the database to the client in JSON.
+            return ApplicationSchema(many=True).dump(applications)
+        else:
+            return {"School not found": "Try changing the school name"}
 
 # Read your own applications (R)
 @application_bp.route('/<int:id>', methods=['GET'])
