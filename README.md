@@ -8,13 +8,13 @@
 
 College admissions is a difficult process.
 
-Especially so for the 1.1 million members of the community [r/ApplyingToCollege](https://www.reddit.com/r/ApplyingToCollege/), many of which are obsessed with so-called ["T20 universities"](https://www.usnews.com/best-colleges/rankings/national-universities). A term referring to universities ranked amongst top 20 national universities in the United States, typically ranked by publications such as U.S. News & World Report.
+Especially so for the members of the community [r/ApplyingToCollege](https://www.reddit.com/r/ApplyingToCollege/) and [r/chanceme](https://www.reddit.com/r/chanceme/), many of which are obsessed with so-called ["T20 universities"](https://www.usnews.com/best-colleges/rankings/national-universities). A term referring to universities ranked amongst top 20 national universities in the United States, typically ranked by publications such as U.S. News & World Report.
 
-Selective universities within the T20 receive an upwards of [60,000 applications](https://www.forbes.com/sites/christopherrim/2024/03/29/this-year-was-a-historic-ivy-league-application-season-heres-what-you-need-to-know/) in a given year, making it truly difficult for students have a clearer understanding and grasp of their standing amongst other applicants.
+These selective and prestigious universities receive an upwards of [60,000 applications](https://www.forbes.com/sites/christopherrim/2024/03/29/this-year-was-a-historic-ivy-league-application-season-heres-what-you-need-to-know/) in a given year, making it difficult for students to understand their standing among other applicants.
 
-For those who are slightly older and have already graduated from university, many of these universities are also popular destinations for students aiming for postgraduate programs.
+For those who are slightly older and have already graduated from university, many of these universities are also popular destinations for students aiming for postgraduate programs, programs that are often fully-funded and do not require tuition payments.
 
-[GradX](https://github.com/duskpeyl/GradX-Graduate-School-Admissions-API) is merely a REST API that aggregates self-reported postgraduate admissions data from top university programs and seeks to resolve that problem for aspiring postgraduate students, by allowing users to compare their applications to other candidates based on their extracurriculars, standardized testing scores and grades.
+[GradX](https://github.com/duskpeyl/GradX-Graduate-School-Admissions-API) is merely a REST API that aggregates self-reported postgraduate admissions data from top university programs. It helps aspiring postgraduate students by allowing users to compare their applications to other candidates based on extracurriculars, standardized testing scores, and grades, enabling them to have a clearer view of their chance of admission.
 
 ### Features
 
