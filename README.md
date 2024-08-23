@@ -8,7 +8,7 @@
 
 College admissions is a difficult process.
 
-Especially so for the members of the board [r/chanceme](https://www.reddit.com/r/chanceme/), a subreddit for students who want feedback from others about their chances of acceptance at various colleges and universities, many of the are obsessed with so-called ["T20 universities"](https://www.usnews.com/best-colleges/rankings/national-universities). A term referring to universities ranked amongst top 20 national universities in the United States, typically ranked by publications such as U.S. News & World Report.
+Especially so for the members of the board [r/chanceme](https://www.reddit.com/r/chanceme/), a subreddit for students who want feedback from others about their chances of acceptance at various colleges and universities, and many of which are obsessed with so-called ["T20 universities"](https://www.usnews.com/best-colleges/rankings/national-universities). A term referring to universities ranked amongst top 20 national universities in the United States, typically ranked by publications such as U.S. News & World Report.
 
 These selective and prestigious universities receive an upwards of [60,000 applications](https://www.forbes.com/sites/christopherrim/2024/03/29/this-year-was-a-historic-ivy-league-application-season-heres-what-you-need-to-know/) in a given year, making it difficult for students to understand their standing amongst other applicants.
 
