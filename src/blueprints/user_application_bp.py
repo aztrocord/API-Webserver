@@ -56,6 +56,7 @@ def read_all_applications(school_name, application_status):
         school_query = db.select(School).where(School.name == school_name)
         school_obj = db.session_scalar(school_query)
 
+        
         if school_obj:
             # Find applications accepted into the chosen school in the URL
             application_queries = db.select(Application).where(Application.school_id == school_obj.id)
